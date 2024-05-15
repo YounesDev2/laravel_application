@@ -10,7 +10,7 @@
                         <h3>Register</h3>
                     </div>
                     <div class="card-body p-4">
-                        <form method="POST" action="#" id="login_form">
+                        <form method="POST"  id="register_form">
                             @csrf
                             <div class="form-group mb-3">
                                 <label for="email">Name</label>
@@ -54,6 +54,22 @@
 @endsection
 
 @section('script')
+<script>
+    $(function(){
+        $('#register_form').submit(function(e){
+            e.preventDefault();
 
+            $.ajax({
+                url : "{{ route('auth.register') }}",
+                method : 'post',
+                dataType : 'json',
+                data : $(this).serialize(),
+                success : function(res){
+                    console.log(res)
+                }
+            })
+        })
+    })
+</script>
 
 @endsection

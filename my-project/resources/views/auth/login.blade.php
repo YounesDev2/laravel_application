@@ -23,7 +23,7 @@
                                 <div class="invalid-feedback"></div>
                             </div>
                             <div class=" mb-3">
-                                <a class="text-decoration-none" href="">Forget Password ?</a>
+                                <a class="text-decoration-none" href="/forgot_password">Forget Password ?</a>
                             </div>
                             <div class="mb-3 d-grid">
                                 <input type="submit" value="Login" class="btn rounded-0 btn-dark" id="login_btn">
